@@ -12,6 +12,12 @@ export default class Document extends NextDocument {
             id="stitches"
             dangerouslySetInnerHTML={{ __html: getCssText() }}
           />
+          <meta property="og:title" content="Home" />
+          <meta property="og:description" content="Hop-On the Next.bus" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://card-components-lib.vercel.app/" />
+          <meta property="og:image" content="https://imgasset.s3.ca-central-1.amazonaws.com/card--com--og.png" />
+
         </Head>
         <body>
           <Main />
