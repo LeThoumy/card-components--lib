@@ -1,6 +1,7 @@
 import { styled } from '../stitches.config.js';
 
 const Label = styled('span', {
+	/* -------------------------------- Variants -------------------------------- */
 	variants: {
 		bold: {
 			true: {
@@ -57,7 +58,12 @@ const Label = styled('span', {
 		},
 		link: {
 			true: {
-				color: "$txtLink"
+				cursor: 'pointer',
+				color: "$txtLink",
+				'&:hover': {
+					opacity: '0.7',
+					transition: 'opacity 0.3s ease'
+				}
 			}
 		}
 	}

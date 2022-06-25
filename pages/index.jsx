@@ -1,6 +1,5 @@
-import Head from 'next/head'
 import { styled, globalCss } from '../stitches.config'
-import Btn from "../components/Btn"
+import Head from 'next/head'
 import Label from '../components/Label'
 import Chip from '../components/Chip'
 import ArrowSvg from '../components/icons/ArrowSvg'
@@ -14,8 +13,6 @@ import BoltIcon from '../components/icons/BoltIcon'
 import RefundIcon from '../components/icons/RefundIcon'
 import UstlensilIcon from '../components/icons/UstlensilIcon'
 import SeatXLIcon from '../components/icons/SeatXLIcon'
-
-/* import WifiIcon from '../components/icons/WifiIcon' */
 
 
 /* -------------------------- Utilities Components -------------------------- */
@@ -38,7 +35,6 @@ const LineisInformative = styled('hr', {
 	width: 'fit',
 	ml: '$x2',
 })
-
 
 
 const Inline = styled('div', {
@@ -72,10 +68,10 @@ const SellableCard = styled('div', {
 		width: '80vw'
 	},
 	'@bp2': {
-		width: '65vw'
+		width: '60vw'
 	},
 	'@bp3': {
-		width: '50vw'
+		width: '40vw'
 	},
 	'@bp4': {
 		width: '25vw'
@@ -103,10 +99,10 @@ const SummaryCard = styled('div', {
 		width: 'calc(80vw)'
 	},
 	'@bp2': {
-		width: 'calc(65vw)'
+		width: 'calc(60vw)'
 	},
 	'@bp3': {
-		width: 'calc(50vw)'
+		width: 'calc(40vw)'
 	},
 	'@bp4': {
 		width: 'calc(25vw)'
@@ -144,10 +140,10 @@ const WithTopPanel = styled('div', {
 		width: 'calc(80vw + 16px)'
 	},
 	'@bp2': {
-		width: 'calc(65vw + 16px)'
+		width: 'calc(60vw + 16px)'
 	},
 	'@bp3': {
-		width: 'calc(50vw + 16px)'
+		width: 'calc(40vw + 16px)'
 	},
 	'@bp4': {
 		width: 'calc(25vw + 16px)'
@@ -171,10 +167,10 @@ const WithBottomPanel = styled('div', {
 		width: 'calc(80vw + 16px)'
 	},
 	'@bp2': {
-		width: 'calc(65vw + 16px)'
+		width: 'calc(60vw + 16px)'
 	},
 	'@bp3': {
-		width: 'calc(50vw + 16px)'
+		width: 'calc(40vw + 16px)'
 	},
 	'@bp4': {
 		width: 'calc(25vw + 16px)'
@@ -187,7 +183,9 @@ const Main = styled('main', {
 	display: 'Grid',
 	placeItems: 'center',
 	placeSelf: 'center',
-	height: '100vh',
+	gap: '10vh',
+	height: 'auto',
+	py: '20vh',
 })
 
 const Box = styled('div', {
@@ -213,9 +211,12 @@ export default function Home() {
 	return (
 		<Main css={{ backgroundColor: '#deeef5' }}>
 			<Head>
-				<title>🚍 Components lib</title>
+				<title>🚍</title>
 			</Head>
-			{/* ------------------------- Sellable Card Component ------------------------ */}
+			{/* -------------------------------------------------------------------------- */
+			 /*                           Sellable Card Component                          */
+			 /* -------------------------------------------------------------------------- */}
+
 			<SellableCard>
 				<Inline>
 					<Box css={{ maxWidth: '100px', ml: "$x2dot5" }}>
@@ -262,7 +263,9 @@ export default function Home() {
 				</Inline>
 			</SellableCard>
 
-			{/* ------------------------- Summary Card Component ------------------------ */}
+			{/* -------------------------------------------------------------------------- */
+			 /*                           Summary Card Component                           */
+			 /* -------------------------------------------------------------------------- */}
 			<SummaryCard>
 				<Inline>
 					<Box css={{ maxWidth: '100px', ml: "$x2dot5" }}>
@@ -316,7 +319,9 @@ export default function Home() {
 				</Inline>
 			</SummaryCard>
 
-			{/* ------------------------- Summary Card Component/Panel Option/Top ------------------------ */}
+			{/* ------------------------------------------------------------------------- */
+			 /*                  Summary Card Component/Panel Option/Top                  */
+			 /* ------------------------------------------------------------------------- */}
 			<WithTopPanel>
 				<InlineisCentered css={{ py: '$base' }}>
 					<BoltIcon></BoltIcon>
@@ -369,7 +374,9 @@ export default function Home() {
 				</SummaryCardContainer>
 			</WithTopPanel>
 
-			{/* ------------------------- Summary Card Component/Panel Option/Bottom ------------------------ */}
+			{/* ------------------------------------------------------------------------- */
+ 			 /*                 Summary Card Component/Panel Option/Bottom                */
+ 			 /* ------------------------------------------------------------------------- */}
 			<WithBottomPanel>
 				<SummaryCardContainer>
 					<Inline>
@@ -421,6 +428,7 @@ export default function Home() {
 							<IconisDark as="span" className='material-symbols-outlined'>navigate_next</IconisDark>
 						</Chip>
 					</Inline>
+
 					<LineisInformative></LineisInformative>
 					<Inline css={{ padding: '0px 8px 0 $x2dot5', margin: '$base 0px', alignItems: 'center' }}>
 						<BoxInline>
@@ -436,8 +444,6 @@ export default function Home() {
 					</Inline>
 				</Box>
 			</WithBottomPanel>
-			{/* ------------------------- Summary Card Component/Panel Option/Top ------------------------ */}
-
 		</Main>
 	)
 }

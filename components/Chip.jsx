@@ -1,4 +1,6 @@
 import { styled } from '../stitches.config.js';
+import { keyframes } from '@stitches/react';
+
 const Chip = styled('button', {
 	/* ----------------------------- Default Styles ----------------------------- */
 	display: 'flex',
@@ -12,6 +14,7 @@ const Chip = styled('button', {
 	'& svg': {
 		fontSize: '20px',
 	},
+	/* -------------------------------- Variants -------------------------------- */
 	variants: {
 		size: {
 			md: {
@@ -30,7 +33,7 @@ const Chip = styled('button', {
 		color: {
 			blue: {
 				backgroundColor: '$blueReg500',
-				color: '$txtOverBg'
+				color: '$txtOverBg',
 			},
 			neutral: {
 				backgroundColor: '$bgSecondaryTransparent'
@@ -40,7 +43,7 @@ const Chip = styled('button', {
 			}
 
 		},
-	}
+	},
 });
 
 export default Chip

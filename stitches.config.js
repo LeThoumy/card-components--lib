@@ -20,7 +20,8 @@ export const {
       /* -------------------------------------------------------------------------- */
       /*                                Global Colors                               */
       /* -------------------------------------------------------------------------- */
-      blueReg500: '#0271CA',
+      blueReg500: 'hsla(208, 100%, 32%, 1)',
+      blueReg600: 'hsl(208,100%,32%, 1)',
       blueAccent400Transparent: 'hsla(206, 100%, 51%, 1)',
       blueAccent500Transparent: 'hsla(203, 100%, 59%, 0.1)',
       blueMuted: 'hsla(206, 48%, 24%, 1)',
@@ -201,7 +202,9 @@ const injectGlobalStyles = globalCss({
   },
   "*:after": { boxSizing: "border-box" },
   "*:before": { boxSizing: "border-box" },
-  'button': { border: 'none' }
+  'button': { border: 'none', cursor: 'pointer', opacity: '1', transition: 'opacity 0.3s ease-out' },
+  'button:hover': { opacity: '0.9', boxShadow: '$md', transition: 'all 0.1s ease-in' },
+  'button:active': { opacity: '0.7', boxShadow: '$sm', transition: 'all 0.1s linear' }
 })
 
 injectGlobalStyles()
