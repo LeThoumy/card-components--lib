@@ -1,6 +1,6 @@
 # Css-↯-Js Integration
 
-Visit Link to staging here
+Visit link to staging here
 
-[![Staging Link](https://vercel.com/button)](https://card-components-lib.vercel.app/)
+[![Staging Link](https://svgshare.com/i/jM7.svg)](https://card-components-lib.vercel.app/)
 
